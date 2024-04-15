@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coin Request Form</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+            .coin-request-container {
+                max-width: 600px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+            .coin-request-form {
+                margin-top: 20px;
+            }
+            .coin-request-form label {
+                display: block;
+                margin-bottom: 5px;
+                color: #333;
+            }
+            .coin-request-form input[type="text"],
+            .coin-request-form textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            .coin-request-form input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .coin-request-form input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="coin-request-container">
+            <h1>Request Coins</h1>
+            <form class="coin-request-form">
+                <label for="amount">Amount of Coins:</label>
+                <input type="text" id="amount" name="amount" required>
+                <label for="reason">Reason for Request:</label>
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+                <input type="submit" value="Submit Request">
+            </form>
+        </div>
+    </body>
+</html>
