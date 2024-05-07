@@ -1,0 +1,98 @@
+package com.kashif.entity;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+
+@Component
+@Document(collection = "coin_request") // Define MongoDB collection name
+public class CoinRequest {
+    @Id // MongoDB ID annotation
+    private String id; // MongoDB uses String for id by default
+    private Integer coins;
+    private String reason;
+    private String status;
+    private Date creationTime;
+    private String createdBy;
+    private String updatedBy;
+    private Date updatedTime;
+
+    @DBRef // MongoDB reference annotation
+    private UserRegistration user;
+
+    // Getters and Setters
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Integer getCoins() {
+        return coins;
+    }
+
+    public void setCoins(Integer coins) {
+        this.coins = coins;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Date getCreationTime() {
+        return creationTime;
+    }
+
+    public void setCreationTime(Date creationTime) {
+        this.creationTime = creationTime;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public String getUpdatedBy() {
+        return updatedBy;
+    }
+
+    public void setUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+    }
+
+    public Date getUpdatedTime() {
+        return updatedTime;
+    }
+
+    public void setUpdatedTime(Date updatedTime) {
+        this.updatedTime = updatedTime;
+    }
+
+    public UserRegistration getUser() {
+        return user;
+    }
+
+    public void setUser(UserRegistration user) {
+        this.user = user;
+    }
+}
